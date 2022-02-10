@@ -21,14 +21,12 @@ the end station.
 
 */
 
-USE BikeShareCaseStudy; -- (name of database)
+USE BikeShareCaseStudy; -- database name 
 
 CREATE TABLE divvytripdata
 (ride_id nvarchar(255), rideable_type nvarchar(255), started_at datetime, ended_at datetime, start_station_name nvarchar(255), start_station_id nvarchar(255),
 end_station_name nvarchar(255), end_station_id nvarchar(255), start_lat float, start_lng float, end_lat float, end_lng float, member_casual nvarchar(255),
 miles_traveled float, time_minutes_per_trip float)
-
-USE BikeShareCaseStudy;
 
 INSERT INTO divvytripdata
 Select * From divvy202102cleaned
